@@ -21,7 +21,7 @@ The optional synchronization mechanism works by zipping the configured list of f
 
 	homeboy-push
 
-After pushing, the next time `homeboy’ is run on any configured machine, the .zip file will be unzipped into the home directory of that machine. It’s really not complicated, but saves time by having to make the same change a bunch of times across different machines and platforms, all having subtle differences.
+After pushing, the next time `homeboy’ is run on any configured machine, the .zip file will be unzipped into your home directory on that machine. It’s really not complicated, but saves the time of having to make the same change a bunch of times across different machines and platforms, all having subtle differences. Having your core config file backed up in a sync'd location comes in handy, too! 
 
 
 
