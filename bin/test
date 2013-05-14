@@ -1,0 +1,10 @@
+#!/bin/sh
+variable='aoeu'
+s="$(cat <<\EOT
+ some terrible\n
+ text also with $variable inside\n
+ here 'lol' "lol"\n
+EOT
+)"
+
+echo $s

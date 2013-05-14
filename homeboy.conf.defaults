@@ -1,0 +1,14 @@
+# Wassup, homeboy lives!
+HOMEBOY_SYSTEM=$HOMEBOY_SYSTEM
+
+# Various updatable things, which varies by platform and context.
+HOMEBOY_UPDATE_RVM=true
+HOMEBOY_UPDATE_BREW=true
+HOMEBOY_UPDATE_APT=false
+HOMEBOY_UPDATE_YUM=false
+
+# If enabled, all subdirectories of the root
+# will be entered and have 'git pull origin master'
+# run within. 
+HOMEBOY_UPDATE_GIT=true
+HOMEBOY_GIT_ROOT=$HOMEBOY_GIT_ROOT
