@@ -1,5 +1,5 @@
 homeboy
-====/
+====
 
 BASH scripts to keep your local development environment up-to-date across multiple environments. Say hi to your homeboy every morning!
 
