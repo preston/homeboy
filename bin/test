@@ -1,10 +1,9 @@
-#!/bin/sh
-variable='aoeu'
-s="$(cat <<\EOT
- some terrible\n
- text also with $variable inside\n
- here 'lol' "lol"\n
-EOT
-)"
+#!/bin/bash
 
-echo $s
+# files=( ~/.bash_profile ~/.bashrc )
+# for i in "${files[@]}"; do
+#    echo $i
+#    # do whatever on $i
+# done
+
+echo $(cd `dirname "$0"` && pwd -P)

@@ -12,3 +12,10 @@ HOMEBOY_UPDATE_YUM=false
 HOMEBOY_UPDATE_GIT=true
 HOMEBOY_GIT_ROOT=$HOMEBOY_GIT_ROOT
 
+# If sync is enabled, 'homeboy-push' will create a .zip file
+# in the given directory including the given files. If the .zip
+# is present, 'homeboy' will overwrite any existing files in
+# your home directory with those in the .zip!
+HOMEBOY_SYNC=true
+HOMEBOY_SYNC_DIR=~/Dropbox/
+HOMEBOY_SYNC_FILES=( ~/.bash_profile ~/.bashrc )

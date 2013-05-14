@@ -1,17 +1,17 @@
 #!/bin/bash
 HOMEBOY_FILE_DIRECTORY=$(dirname "$0")
 HOMEBOY_FILE_DIRECTORY=$(cd "$HOMEBOY_FILE_DIRECTORY" && pwd -P)
-HOMEBOY_ROOT="$HOMEBOY_FILE_DIRECTORY/../"
+export HOMEBOY_ROOT="$HOMEBOY_FILE_DIRECTORY/../"
 HOMEBOY_FILENAME=$(basename "$0")
-export HOMEBOY_SCRIPT="$HOMEBOY_FILE_DIRECTORY/$HOMEBOY_FILENAME"
-# echo $HOMEBOY_ROOT
+HOMEBOY_SCRIPT="$HOMEBOY_FILE_DIRECTORY/$HOMEBOY_FILENAME"
 HOMEBOY_SYSTEM=$(uname -s | tr "[:upper:]" "[:lower:]")
-HOMEBOY_GIT_ROOT=~/Developer/git
+export HOMEBOY_GIT_ROOT=~/Developer/git
 
 
 HOMEBOY_CONFIG_FILE="$HOMEBOY_ROOT/homeboy.conf"
 HOMEBOY_CONFIG_FILE_DEFAULTS="$HOMEBOY_CONFIG_FILE.defaults"
 
+HOMEBOY_SYNC_FILE="homeboy.zip"
 
 if [ -n $HOMEBOY_CONFIG_FILE ]; then
 	cp $HOMEBOY_CONFIG_FILE $HOMEBOY_CONFIG_FILE_DEFAULTS
@@ -19,51 +19,11 @@ fi
 
 source $HOMEBOY_CONFIG_FILE
 
-
-function homeboy-update-self {
-	cd $HOMEBOY_ROOT
-	git pull origin master
-}
-
-function homeboy-update-rvm {
-	echo "Updating Ruby Version Manager (RVM)..."
-	rvm get stable
-	gem get stable
-}
-
-function homeboy-update-git {
-	echo "Updating git projects..."
-	cd $HOMEBOY_GIT_ROOT
-	DIRS=`find . -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) | sed 's|^\./||g'`
-	for DIR in DIRS distributions; do
-		cd $DIR
-		git pull origin master
-		cd ..
-	done
-}
-
-function homeboy-update-brew {
-	echo "Updating homebrew..."
-	brew update
-	brew upgrade
-	brew doctor
-}
-
-function homeboy-update-apt {
-	echo "Updating apt..."
-	apt-get update
-	apt-get upgrade -y
-	apt-get autoremove -y
-	apt-get autoclean
-}
-
-function homeboy-update-yum {
-	echo "Updating yum..."
-	yum update
-}
+source $HOMEBOY_ROOT/homeboy-functions.sh
 
 
-echo $HOMEBOY_SYSTEM
+homeboy-update-self
+
 if [ $HOMEBOY_UPDATE_BREW ]; then
 	homeboy-update-brew
 elif [ $HOMEBOY_UPDATE_YUM ]; then
@@ -72,6 +32,10 @@ elif [ $HOMEBOY_UPDATE_APT ]; then
     homeboy-update-apt
 elif [ $HOMEBOY_UPDATE_RVM ]; then
     homeboy-update-rvm
+elif [ $HOMEBOY_UPDATE_GEM ]; then
+    homeboy-update-gem
+elif [ $HOMEBOY_SYNC ]; then
+    homeboy-sync-pull
 fi
 
 echo "Homeboy is outta here!"
