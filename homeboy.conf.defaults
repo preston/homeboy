@@ -1,5 +1,4 @@
 # Wassup, homeboy lives!
-HOMEBOY_SYSTEM=$HOMEBOY_SYSTEM
 
 # Various updatable things, which varies by platform and context.
 HOMEBOY_UPDATE_RVM=true
@@ -12,3 +11,4 @@ HOMEBOY_UPDATE_YUM=false
 # run within. 
 HOMEBOY_UPDATE_GIT=true
 HOMEBOY_GIT_ROOT=$HOMEBOY_GIT_ROOT
+
