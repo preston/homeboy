@@ -35,3 +35,9 @@ Copyright
 
 Copyright (c) 2013 Preston Lee. See LICENSE.txt for
 further details.
+
+
+License
+----
+
+Homeboy is released under the MIT license. See the LICENSE file for details.
