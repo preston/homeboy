@@ -8,7 +8,7 @@ function homeboy-update-self {
 function homeboy-update-rvm {
 	echo "Updating Ruby Version Manager (RVM)..."
 	rvm get stable
-	gem get stable
+	gem update
 }
 
 function homeboy-update-gem {
@@ -19,10 +19,12 @@ function homeboy-update-gem {
 function homeboy-update-git {
 	echo "Updating git projects..."
 	cd $HOMEBOY_GIT_ROOT
+	echo $HOMEBOY_GIT_ROOT
 	DIRS=`find . -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) | sed 's|^\./||g'`
-	for DIR in DIRS distributions; do
+	for DIR in $DIRS; do
 		cd $DIR
-		git pull origin master
+		pwd
+		# git pull origin master
 		cd ..
 	done
 }

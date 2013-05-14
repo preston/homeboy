@@ -1,4 +1,4 @@
-# Wassup, homeboy lives!
+# Wassup, homeboy!
 
 # Various updatable things, which varies by platform and context.
 HOMEBOY_UPDATE_RVM=true
@@ -10,7 +10,7 @@ HOMEBOY_UPDATE_YUM=false
 # will be entered and have 'git pull origin master'
 # run within. 
 HOMEBOY_UPDATE_GIT=true
-HOMEBOY_GIT_ROOT=$HOMEBOY_GIT_ROOT
+HOMEBOY_GIT_ROOT=~/Developer/git
 
 # If sync is enabled, 'homeboy-push' will create a .zip file
 # in the given directory including the given files. If the .zip
@@ -19,4 +19,4 @@ HOMEBOY_GIT_ROOT=$HOMEBOY_GIT_ROOT
 HOMEBOY_SYNC=true
 HOMEBOY_SYNC_DIR=~/Dropbox/
 HOMEBOY_SYNC_FILE=homeboy.zip
-HOMEBOY_SYNC_FILES=( ~/.bash_profile ~/.bashrc )
+HOMEBOY_SYNC_FILES=( ~/.bash_profile ~/.bashrc ~/.gitconfig)

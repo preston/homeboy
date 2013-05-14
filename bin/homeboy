@@ -1,11 +1,20 @@
 #!/bin/bash
+#
+# Homeboy is a set of scripts for keeping your local development environment
+# both up-to-date and synchronized across multiple machines.
+#
+#
+# Copyright 2013 Preston Lee. All rights reserved. http://prestonlee.com
+# Please see LICENSE file for details.
+#
+
+
 HOMEBOY_FILE_DIRECTORY=$(dirname "$0")
 HOMEBOY_FILE_DIRECTORY=$(cd "$HOMEBOY_FILE_DIRECTORY" && pwd -P)
-export HOMEBOY_ROOT="$HOMEBOY_FILE_DIRECTORY/../"
+export HOMEBOY_ROOT="$HOMEBOY_FILE_DIRECTORY/.."
 HOMEBOY_FILENAME=$(basename "$0")
 HOMEBOY_SCRIPT="$HOMEBOY_FILE_DIRECTORY/$HOMEBOY_FILENAME"
 HOMEBOY_SYSTEM=$(uname -s | tr "[:upper:]" "[:lower:]")
-export HOMEBOY_GIT_ROOT=~/Developer/git
 
 
 HOMEBOY_CONFIG_FILE="$HOMEBOY_ROOT/homeboy.conf"
@@ -25,15 +34,23 @@ homeboy-update-self
 
 if [ $HOMEBOY_UPDATE_BREW ]; then
 	homeboy-update-brew
-elif [ $HOMEBOY_UPDATE_YUM ]; then
+fi
+if [ $HOMEBOY_UPDATE_YUM ]; then
 	homeboy-update-yum
-elif [ $HOMEBOY_UPDATE_APT ]; then
+fi
+if [ $HOMEBOY_UPDATE_APT ]; then
     homeboy-update-apt
-elif [ $HOMEBOY_UPDATE_RVM ]; then
+fi
+if [ $HOMEBOY_UPDATE_RVM ]; then
     homeboy-update-rvm
-elif [ $HOMEBOY_UPDATE_GEM ]; then
+fi
+if [ $HOMEBOY_UPDATE_GEM ]; then
     homeboy-update-gem
-elif [ $HOMEBOY_SYNC ]; then
+fi
+if [ $HOMEBOY_UPDATE_GIT ]; then
+    homeboy-update-git
+fi
+if [ $HOMEBOY_SYNC ]; then
     homeboy-sync-pull
 fi
 
