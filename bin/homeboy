@@ -30,26 +30,26 @@ source $HOMEBOY_CONFIG_FILE
 source $HOMEBOY_ROOT/homeboy-functions.sh
 
 
-# homeboy-update-self
+homeboy-update-self
 
-# if [ $HOMEBOY_UPDATE_BREW ]; then
-# 	homeboy-update-brew
-# fi
-# if [ $HOMEBOY_UPDATE_YUM ]; then
-# 	homeboy-update-yum
-# fi
-# if [ $HOMEBOY_UPDATE_APT ]; then
-#     homeboy-update-apt
-# fi
-# if [ $HOMEBOY_UPDATE_RVM ]; then
-#     homeboy-update-rvm
-# fi
-# if [ $HOMEBOY_UPDATE_GEM ]; then
-#     homeboy-update-gem
-# fi
-# if [ $HOMEBOY_UPDATE_GIT ]; then
-#     homeboy-update-git
-# fi
+if [ $HOMEBOY_UPDATE_BREW ]; then
+	homeboy-update-brew
+fi
+if [ $HOMEBOY_UPDATE_YUM ]; then
+	homeboy-update-yum
+fi
+if [ $HOMEBOY_UPDATE_APT ]; then
+    homeboy-update-apt
+fi
+if [ $HOMEBOY_UPDATE_RVM ]; then
+    homeboy-update-rvm
+fi
+if [ $HOMEBOY_UPDATE_GEM ]; then
+    homeboy-update-gem
+fi
+if [ $HOMEBOY_UPDATE_GIT ]; then
+    homeboy-update-git
+fi
 if [ $HOMEBOY_SYNC ]; then
     homeboy-sync-pull
 fi
