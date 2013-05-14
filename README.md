@@ -13,11 +13,12 @@ Clone the project into ~/.homeboy
     $ cp ~/.homeboy/homeboy.conf.defaults ~/.homeboy/homeboy.conf
     $ echo 'export PATH=~/.homeboy/bin:$PATH' >> ~/.bash_profile
 
-Edit the ~/.homeboy/homeboy.conf and edit settings appropriately for your system configuration.
+Edit the ~/.homeboy/homeboy.conf and edit settings appropriately for your system configuration. When you're done editing settings, just run `homeboy'.
+
+	$ homeboy
 
 
 == Copyright
 
 Copyright (c) 2013 Preston Lee. See LICENSE.txt for
 further details.
-
