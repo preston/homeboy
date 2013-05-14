@@ -23,4 +23,4 @@ HOMEBOY_SYNC_FILE=homeboy.zip
 # Only use paths relative to your home directory.
 # When unzipping updates from Dropbox (or whatever)
 # you will be prompted to overwrite any existing files.
-HOMEBOY_SYNC_FILES=( .bash_profile .bashrc .gitconfig)
+HOMEBOY_SYNC_FILES=( .bash_profile .bashrc .gitconfig .homeboy/homeboy.conf)
