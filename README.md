@@ -1,7 +1,7 @@
 homeboy
 ====
 
-BASH scripts to keep your local development environment up-to-date across multiple environments. Say hi to your homeboy every morning!
+BASH scripts to keep your local development environment up-to-date across multiple machines. Say hi to your homeboy every morning!
 
 
 Quick Start
@@ -13,7 +13,7 @@ Clone the project into ~/.homeboy
     cp ~/.homeboy/homeboy.conf.defaults ~/.homeboy/homeboy.conf
     echo 'export PATH=~/.homeboy/bin:$PATH' >> ~/.bash_profile
 
-*Start a new terminal* to force your .bash_profile to reload, and edit the ~/.homeboy/homeboy.conf, changing and settings appropriately for this specific systems configuration. When you're done editing settings, just run `homeboy'.
+**Start a new terminal to force your .bash_profile to reload**, and edit the ~/.homeboy/homeboy.conf, changing and settings appropriately for this specific systems configuration. When you're done editing settings, just run `homeboy'.
 
 	homeboy
 
