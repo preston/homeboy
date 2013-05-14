@@ -2,8 +2,10 @@
 
 D=$(cd `dirname "$0"` && pwd -P)
 . "$D/../homeboy.conf"
-rm $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE
-# echo "${HOMEBOY_SYNC_FILES[@]}"
+if [ -f $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE ]; then
+	echo "Removing existing homeboy archive..."
+	rm $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE
+fi
 cd
 zip -r $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE "${HOMEBOY_SYNC_FILES[@]}"
 echo "All done, homeboy!"
