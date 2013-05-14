@@ -19,13 +19,15 @@ function homeboy-update-gem {
 function homeboy-update-git {
 	echo "Updating git projects..."
 	cd $HOMEBOY_GIT_ROOT
-	echo $HOMEBOY_GIT_ROOT
 	DIRS=`find . -mindepth 1 -maxdepth 1 -type d  \( ! -iname ".*" \) | sed 's|^\./||g'`
 	for DIR in $DIRS; do
-		cd $DIR
-		pwd
-		# git pull origin master
-		cd ..
+		if [[ -d $DIR && -d $DIR/.git ]]; then
+			cd $DIR
+			echo -e "Upditing $DIR..."
+			# pwd -P
+			git pull origin master
+			cd ..
+		fi
 	done
 }
 
@@ -50,6 +52,9 @@ function homeboy-update-yum {
 }
 
 function homeboy-sync-pull {
-	unzip $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE -d $HOME
+	if [[ -f $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE ]]; then
+		echo "Updating sync'd files..."
+		unzip $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE -d $HOME
+	fi
 }
 

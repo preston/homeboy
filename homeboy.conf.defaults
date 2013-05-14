@@ -17,6 +17,10 @@ HOMEBOY_GIT_ROOT=~/Developer/git
 # is present, 'homeboy' will overwrite any existing files in
 # your home directory with those in the .zip!
 HOMEBOY_SYNC=true
-HOMEBOY_SYNC_DIR=~/Dropbox/
+HOMEBOY_SYNC_DIR=~/Dropbox
 HOMEBOY_SYNC_FILE=homeboy.zip
-HOMEBOY_SYNC_FILES=( ~/.bash_profile ~/.bashrc ~/.gitconfig)
+
+# Only use paths relative to your home directory.
+# When unzipping updates from Dropbox (or whatever)
+# you will be prompted to overwrite any existing files.
+HOMEBOY_SYNC_FILES=( .bash_profile .bashrc .gitconfig)
