@@ -27,7 +27,7 @@ After pushing, the next time `homeboy’ is run on any configured machine, the .
 
 Updating All Your Git Clones
 ---- 
-When using the git updating options (see config file), homeboy assumes your have a single directory where you keep all your clones, such as ~/Developer/git. Every subdirectory that looks like a git clone will have ‘git pull origin master’ run inside it.
+When using the git updating options (see config file), homeboy assumes you have a single directory where all your clones are kept, such as ~/Developer/git. Every subdirectory that looks like a git clone will have ‘git pull origin master’ run inside it.
 
 
 Copyright
