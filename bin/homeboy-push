@@ -7,5 +7,6 @@ if [ -f $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE ]; then
 	rm $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE
 fi
 cd
+echo "Creating new homeboy archive..."
 zip -r $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE "${HOMEBOY_SYNC_FILES[@]}"
 echo "All done, homeboy!"
