@@ -9,13 +9,13 @@ Quick Start
 
 Clone the project into ~/.homeboy
 
-    $ git clone git@github.com:preston/homeboy.git ~/.homeboy
-    $ cp ~/.homeboy/homeboy.conf.defaults ~/.homeboy/homeboy.conf
-    $ echo 'export PATH=~/.homeboy/bin:$PATH' >> ~/.bash_profile
+    git clone git@github.com:preston/homeboy.git ~/.homeboy
+    cp ~/.homeboy/homeboy.conf.defaults ~/.homeboy/homeboy.conf
+    echo 'export PATH=~/.homeboy/bin:$PATH' >> ~/.bash_profile
 
 Edit the ~/.homeboy/homeboy.conf and edit settings appropriately for your system configuration. When you're done editing settings, just run `homeboy'.
 
-	$ homeboy
+	homeboy
 
 
 == Copyright
