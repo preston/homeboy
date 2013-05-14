@@ -18,4 +18,5 @@ HOMEBOY_GIT_ROOT=$HOMEBOY_GIT_ROOT
 # your home directory with those in the .zip!
 HOMEBOY_SYNC=true
 HOMEBOY_SYNC_DIR=~/Dropbox/
+HOMEBOY_SYNC_FILE=homeboy.zip
 HOMEBOY_SYNC_FILES=( ~/.bash_profile ~/.bashrc )

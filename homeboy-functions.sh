@@ -51,7 +51,3 @@ function homeboy-sync-pull {
 	unzip $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE -d $HOME
 }
 
-function homeboy-sync-push {
-	zip -r $HOMEBOY_SYNC_DIR/$HOMEBOY_SYNC_FILE $HOME
-}
-
