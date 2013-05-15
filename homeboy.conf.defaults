@@ -20,12 +20,7 @@ HOMEBOY_SYNC=true
 HOMEBOY_SYNC_DIR=~/Dropbox
 HOMEBOY_SYNC_FILE=homeboy.zip
 
-# Only use paths relative to your home directory!
+# Only use paths relative to your home directory.
 # When unzipping updates from Dropbox (or whatever)
 # you will be prompted to overwrite any existing files.
-# Before adding sensitive files such as .ssh/id_rsa,
-# note that these are added to the UNENCRYPTED .zip
-# via the configuration above, and may or may not be
-# uploaded to a cloud service, depending on how you
-# sync your stuff. So just be careful, a'ight?
 HOMEBOY_SYNC_FILES=( .bash_profile .bashrc .gitconfig .homeboy/homeboy.conf)
