@@ -34,7 +34,7 @@ function homeboy-update-git {
 function homeboy-update-brew {
 	echo "Updating installed homebrews..."
 	brew update
-	brew upgrade
+	brew upgrade --all
 	brew doctor
 }
 
